@@ -4,20 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ComponetsController extends Controller
+class ComponentsController extends Controller
 {
     public function index(){
 
     	$components = [
-    		'viedo',
+            'video-hero',
+    		'video',
     		'slider'
     	];
 
-    	return view('components.index', compact($components));
+    	return view('components.index', compact('components'));
 
     }
 
     public function show($component){
-    	require view($components.{$component});
+    	return view("components.{$component}");
     }
 }
+

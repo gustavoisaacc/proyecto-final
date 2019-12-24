@@ -1,6 +1,6 @@
-@foreach(components as component)
+@foreach($components as $component)
 	<div>
-		<a href="{{route('$components.show', $component)}}">{{$component}}</a>
+		<a href="{{route('components.show', $component)}}">{{$component}}</a>
 	</div>
 	
 @endforeach

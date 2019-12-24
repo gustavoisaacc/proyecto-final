@@ -1,0 +1,127 @@
+.video-item{
+    padding-top: 150%;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    border-radius: 3px;
+
+    &:hover{
+
+        img{
+            transform: scale(2);
+        }
+
+        .details{
+            bottom: 0;
+            opacity: 1;
+        }
+
+        .langs{
+            .spanish, .latam, .english{
+                margin-left: -100%;
+                opacity: 0;
+            }
+        }
+    }
+
+    .details{
+        position: absolute;
+        bottom: -100%;
+        padding: 10px;
+        padding-top: 50px;
+        background: rgba(0, 0, 0, 0.2);
+        width: 100%;
+        opacity: 0;
+        transition: bottom 0.5s ease-in-out, opacity 1s ease-in-out;
+
+        .video-title{
+            font-size: 2rem;
+            color: $text-color;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        .button-play{
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            color: #ff4242;
+            font-size: 2rem;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 0.8em;
+        }
+
+        .info{
+            color: $white;
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+
+            .pegi{
+                padding: 2px 5px;
+                border: 1px solid $white;
+                border-radius: 2px;
+                margin-right: 1rem;
+            }
+        }//info
+
+        .gender{
+            color: $white;
+            font-weight: 600;
+        }
+    }
+
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        object-fit: cover;
+        transition: all 20s ease-in;
+        display: block;
+    }
+
+
+
+    .langs{
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+
+        .spanish, .latam, .english{
+            font-size: 1.2rem;
+            color: $white;
+            background: rgba(0, 0, 0, 0.25);
+            margin-bottom: 1rem;
+            padding: 0.2rem;
+            border-right: 5px solid #fff;
+
+        }
+
+        .spanish{
+            transition: all 0.5s ease-in-out 0.3s;
+            border-right-color: $yellow;
+        }
+
+        .latam{
+            transition: all 0.5s ease-in-out 0.2s;
+            border-right-color: $green;
+        }
+
+        .english{
+            transition: all 0.5s ease-in-out;
+            border-right-color: $red;
+        }
+    }
+}
