@@ -9,6 +9,7 @@ class ComponentsController extends Controller
     public function index(){
 
     	$components = [
+            
             'video-hero',
     		'video',
     		'slider'

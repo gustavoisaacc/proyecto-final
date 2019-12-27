@@ -1,0 +1,19 @@
+.video-slider{
+	padding: 10% 0;
+	height: 0;
+	&.start{
+		height: auto;
+	}
+
+	&.effect-on{
+		.swiper-slide{
+			transition: all .5s ease-in-out;
+
+			&.swiper-slide-active{
+				transform: scale(1.5);
+				z-index: 5;
+			}
+
+		}
+	}
+}
